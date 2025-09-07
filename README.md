@@ -56,6 +56,7 @@ Below are the base list of external software that I install into a fresh built L
 * [neovim](#neovim)
 * [Docker](#docker)
 * [DevPod](#devpod)
+* [Taskfile](#taskfile)
 
 ### [Chrome](https://www.google.com/chrome/)
 
@@ -86,3 +87,7 @@ Docker is a great containerization tool. I use it for a few tools in my homelab.
 ### [Devpod](https://devpod.sh/docs/getting-started/install)
 
 Devpod is an opensource alternative to the devcontainer feature of VSCode. It even uses the devcontainer file yaml format standard for environment defiitions. It allows using multiple types of containers for remote development. It also integrates with multiple editors, include Zed. This works in concert with docker as part of my development environment.
+
+### [Taskfile](https://taskfile.dev)
+
+Taskfile is a modern task execution utility, similar to Make. It's developed in Go, and housed in a single binary file. Knowing I'll need to automate as much of the installation and deployment for new system setupand having never developed a Makefile, I've opted to try a more modern tool for similar actions.
