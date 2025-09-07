@@ -45,44 +45,44 @@ Now that the apt mirrors are setup properly, it's time to get some items from ap
 4. rclone
     * rclone is rsync for commercial cloud storage providers. It can integrate with Google Drive, AWS, Dropbox, and more. I use it for backing up data to the cloud.
 
-## External Software to Install
+## External Software to Install {#chrome}
 
 Below are the base list of external software that I install into a fresh built Linux system.
 
 * [Chrome](#chrome)
-* [Zed](#zed)
+* [Zed](#zed-editor)
 * [AppImageLauncher](#appimagelauncher)
 * [Obsidian](#obsidian)
 * [neovim](#neovim)
 * [Docker](#docker)
 * [DevPod](#devpod)
 
-### [Chrome](https://www.google.com/chrome/) {#chrome}
+### [Chrome](https://www.google.com/chrome/)
 
 I've been a fan of Google for a long time. While I cut my web browsing teeth in the infancy of the Internet with NCSA Mosaic and had my fun during the Netscape vs Internet Explorer browser wars, I've had Chrome installed on every system I've used that could support it since it was available publicly. In fact, the first thing I do with the pre-installed browser on any fresh build is heading to Google's Chrome page and download the latest version.
 
 As part of the automation piece of this project, I will be looking to figure out how to find and download the current stable version during the buildout.
 
-### [Zed Editor](https://zed.dev/download) {#zed}
+### [Zed Editor](https://zed.dev/download)
 
 The Zed editor is a great opensource alternative to VSCode. From my understanding, it's got most of the stuff VSCode offers, but in a much friendlier license and with really good default configuration options. I honestly can't remember how I came across it, but after my first installation, I never looked back. The installation is really simple, a one liner using curl piped into sh with no need for sudo or root privelages. The final step of the installation includes the commands needed to add the installed binary directory to the path. On Mint, this isn't needed, as .profile already has a call to add that specific directory to the path variable if it exists.
 
-### [AppImageLauncher](https://github.com/TheAssassin/AppImageLauncher) {#appimagelauncher}
+### [AppImageLauncher](https://github.com/TheAssassin/AppImageLauncher)
 
 This is an awesome tool. It runs a daemon that monitors for runs of AppImage files. It will configure the system with the appropriate .desktop file so the AppImage program can be found in the menu. This also ensures that the proper icon for the program is available to be seen on the taskbar and in the menu. This will also move the AppImage files into a single location in the users HOME directories. Finally, the launcher helps update checks for the AppImages.
 
-### [Obsidian](https://obsidian.md/) {#obsidian}
+### [Obsidian](https://obsidian.md/)
 
 This is a really good knowledge management tool. It uses a combination between markdown and wiki formatting to display the data. Similar to a wiki allows for interconected notes and files.
 
-### [Neovim](https://github.com/neovim/neovim) {#neovim}
+### [Neovim](https://github.com/neovim/neovim)
 
 As mentioned previously, vim the preferred editor for me. Neovim started as a fork of vim, which had been getting stale with regards to releases and improvements. Neovim update the code base while implementing a variety of requested features for vim. Since the initial fork/release of Neovim, vim has made some forward movements, even implementing some of the Neovim improvements. I've only just recently started looking at Neovim. I've have yet to decide on a GUI to use with Neovim. The only one I've tried so far had to be compiled from source and the stable release branch still ended up crashing on me.
 
-### [Docker](https://docs.docker.com/engine/install/ubuntu/) {#docker}
+### [Docker](https://docs.docker.com/engine/install/ubuntu/)
 
 Docker is a great containerization tool. I use it for a few tools in my homelab. I've also started looking at it as a remote development envionment. I'm not so much after the ephemeral aspect of the remote development. I do like the idea of using a container to install the development toolchains needed for any project. This keeps my host system free of any potential dependency issues.
 
-### [Devpod](https://devpod.sh/docs/getting-started/install) {#devpod}
+### [Devpod](https://devpod.sh/docs/getting-started/install)
 
 Devpod is an opensource alternative to the devcontainer feature of VSCode. It even uses the devcontainer file yaml format standard for environment defiitions. It allows using multiple types of containers for remote development. It also integrates with multiple editors, include Zed. This works in concert with docker as part of my development environment.
