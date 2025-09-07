@@ -45,7 +45,7 @@ Now that the apt mirrors are setup properly, it's time to get some items from ap
 4. rclone
     * rclone is rsync for commercial cloud storage providers. It can integrate with Google Drive, AWS, Dropbox, and more. I use it for backing up data to the cloud.
 
-## External Software to Install {#chrome}
+## External Software to Install
 
 Below are the base list of external software that I install into a fresh built Linux system.
 
@@ -77,7 +77,7 @@ This is a really good knowledge management tool. It uses a combination between m
 
 ### [Neovim](https://github.com/neovim/neovim)
 
-As mentioned previously, vim the preferred editor for me. Neovim started as a fork of vim, which had been getting stale with regards to releases and improvements. Neovim update the code base while implementing a variety of requested features for vim. Since the initial fork/release of Neovim, vim has made some forward movements, even implementing some of the Neovim improvements. I've only just recently started looking at Neovim. I've have yet to decide on a GUI to use with Neovim. The only one I've tried so far had to be compiled from source and the stable release branch still ended up crashing on me.
+As mentioned previously, vim is the preferred editor for me. Neovim started as a fork of vim, which had been getting stale with regards to releases and improvements. Neovim update the code base while implementing a variety of requested features for vim. Since the initial fork/release of Neovim, vim has made some forward movements, even implementing some of the Neovim improvements. I've only just recently started looking at Neovim. I've have yet to decide on a GUI to use with Neovim. The only one I've tried so far had to be compiled from source and the stable release branch still ended up crashing on me.
 
 ### [Docker](https://docs.docker.com/engine/install/ubuntu/)
 
