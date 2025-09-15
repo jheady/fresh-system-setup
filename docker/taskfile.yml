@@ -1,0 +1,42 @@
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
+version: 3
+
+tasks:
+  install-dependencies:
+    internal: true
+    cmds:
+      - task: apt-update
+      - task: apt-install
+        vars:
+          PACKAGES: ca-certificates curl
+    status:
+      - test -f /usr/sbin/update-ca-certificates
+      - test -f /usr/bin/curl
+
+  add-gpg-key:
+    internal: true
+    deps: [install-dependencies]
+    cmds:
+      - sudo install -m 0755 -d /etc/apt/keyrings
+      - sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+      - sudo chmod a+r /etc/apt/keyrings/docker.asc
+
+  add-docker-repository:
+    internal: true
+    deps: [add-gpg-key]
+    cmds:
+      - bash ./add_docker_repo.bash
+
+  install-docker:
+    deps: [add-docker-repository]
+    cmds:
+      - task: apt-update
+      - task: apt-install
+        vars:
+          PACKAGES: docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+  add-docker-group:
+    deps: [install-docker]
+    cmds:
+      - sudo groupadd docker
+      - sudo usermod -aG docker $USER

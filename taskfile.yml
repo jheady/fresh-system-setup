@@ -1,0 +1,18 @@
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
+version: 3
+
+includes:
+  docker:
+    taskfile: ./docker/taskfile.yml
+    dir: ./docker
+    flatten: true
+
+tasks:
+  apt-update:
+    cmds:
+      - sudo apt-get update
+
+  apt-install:
+    internal: true
+    cmds:
+      - sudo apt-get install -y {{.PACKAGES}}
